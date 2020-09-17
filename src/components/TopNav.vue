@@ -2,7 +2,7 @@
   <div class="topnav">
     <span @click="toggleMenu" class="toggleAside"></span>
     <div class="logo">
-      <span>LOGO</span>
+      <img src="../assets/logo.jpg" />
     </div>
     <input type="text" />
     <div class="menu">
@@ -17,8 +17,11 @@
 
 <script lang='ts'>
 import { inject, Ref } from "vue";
+import x from "../assets/icons/show.svg";
+
 export default {
   setup() {
+    console.log(x);
     const asidVisibile = inject<Ref<boolean>>("asidVisibile");
     const toggleMenu = () => {
       console.log(1);
@@ -36,8 +39,8 @@ export default {
   background: white;
   display: flex;
   justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 8px;
+  align-items: center;
+  padding: 8px 0px;
   border-bottom: 1px solid gray;
   position: relative;
   z-index: 10;
@@ -56,13 +59,18 @@ export default {
     display: none;
   }
   > .logo {
-    margin: 4px 16px;
+    margin-left: 16px;
+    > img {
+      width: 4em;
+      height: 4em;
+    }
   }
   > input {
     margin-left: auto;
     margin-right: 16px;
     padding: 0 16px;
     width: 400px;
+    height: 3em;
     border: 1px solid gray;
     border-radius: 15px;
     &:focus {
@@ -70,6 +78,9 @@ export default {
     }
   }
   > .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     > span {
       display: inline-block;
       margin: 4px 16px;
