@@ -1,7 +1,8 @@
 <template>
   <div class="topnav">
+    <span @click="toggleMenu" class="toggleAside"></span>
     <div class="logo">
-      <span @click="toggleMenu">LOGO</span>
+      <span>LOGO</span>
     </div>
     <input type="text" />
     <div class="menu">
@@ -10,6 +11,7 @@
       <span>设置3</span>
       <span>设置4</span>
     </div>
+    <span class="toggleAside2"></span>
   </div>
 </template>
 
@@ -34,6 +36,20 @@ export default {
   justify-content: space-between;
   padding-bottom: 8px;
   border-bottom: 1px solid gray;
+  > .toggleAside {
+    display: none;
+    width: 24px;
+    height: 24px;
+    background: black;
+    margin-left: 16px;
+  }
+  > .toggleAside2 {
+    width: 24px;
+    height: 24px;
+    background: white;
+    margin-left: 16px;
+    display: none;
+  }
   > .logo {
     margin: 4px 16px;
   }
@@ -52,6 +68,20 @@ export default {
     > span {
       margin: 4px 16px;
       font-size: 16px;
+    }
+  }
+  @media (max-width: 500px) {
+    > .menu {
+      display: none;
+    }
+    > input {
+      display: none;
+    }
+    > .toggleAside {
+      display: inline-block;
+    }
+    > .toggleAside2 {
+      display: inline-block;
     }
   }
 }

@@ -6,20 +6,22 @@
         <h2>Guide</h2>
         <ul>
           <li>
-            <router-link to="/Doc/Switch">Switch组件</router-link>
+            <router-link to="/doc/switch">Switch组件</router-link>
           </li>
           <li>
-            <router-link to="/Doc/Button">Button组件</router-link>
+            <router-link to="/doc/button">Button组件</router-link>
           </li>
           <li>
-            <router-link to="/Doc/xxxx">Dialog组件</router-link>
+            <router-link to="/doc/dialog">Dialog组件</router-link>
           </li>
           <li>
-            <router-link to="/Doc/xxx">Tabs组件</router-link>
+            <router-link to="/doc/tabs">Tabs组件</router-link>
           </li>
         </ul>
       </aside>
-      <main>主内容</main>
+      <main>
+        <router-view />
+      </main>
     </div>
   </div>
 </template>
@@ -31,6 +33,7 @@ export default {
   components: { TopNav },
   setup() {
     const asidVisibile = inject<Ref<boolean>>("asidVisibile");
+
     return { asidVisibile };
   },
 };
@@ -39,7 +42,6 @@ export default {
 .content {
   display: flex;
   > aside {
-    position: absolute;
     > ul {
       > li {
         margin: 8px;
@@ -50,6 +52,11 @@ export default {
           }
         }
       }
+    }
+  }
+  @media (max-width: 500px) {
+    > aside {
+      position: absolute;
     }
   }
 }
