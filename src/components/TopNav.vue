@@ -1,7 +1,7 @@
 <template>
   <div class="topnav">
     <div class="logo">
-      <span>LOGO</span>
+      <span @click="toggleMenu">LOGO</span>
     </div>
     <input type="text" />
     <div class="menu">
@@ -13,14 +13,27 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script lang='ts'>
+import { inject, Ref } from "vue";
+export default {
+  setup() {
+    const asidVisibile = inject<Ref<boolean>>("asidVisibile");
+    const toggleMenu = () => {
+      console.log(1);
+      asidVisibile.value = !asidVisibile.value;
+      console.log(asidVisibile.value);
+    };
+    return { toggleMenu };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .topnav {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid gray;
   > .logo {
     margin: 4px 16px;
   }
@@ -36,7 +49,6 @@ export default {};
     }
   }
   > .menu {
-    border: 1px solid royalblue;
     > span {
       margin: 4px 16px;
       font-size: 16px;
