@@ -1,10 +1,10 @@
 <template>
-  <div>文档</div>
+  <div>Button</div>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style  scoped>
+<style lang="scss" scoped>
 </style>
