@@ -41,12 +41,15 @@ export default {
 <style lang="scss" scoped>
 .content {
   display: flex;
+  height: 630px;
   > aside {
     background: white;
+
     border-right: 1px solid gray;
+    padding-top: 20px;
     > ul {
       > li {
-        margin: 8px;
+        margin: 24px;
         > a {
           color: gray;
           &:focus {
@@ -64,7 +67,7 @@ export default {
       position: absolute;
       top: 0;
       left: 0;
-      padding-top: 60px;
+      padding-top: 80px;
     }
   }
 }
