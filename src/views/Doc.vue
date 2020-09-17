@@ -42,6 +42,8 @@ export default {
 .content {
   display: flex;
   > aside {
+    background: white;
+    border-right: 1px solid gray;
     > ul {
       > li {
         margin: 8px;
@@ -54,9 +56,15 @@ export default {
       }
     }
   }
+  > main {
+    padding: 4px 16px;
+  }
   @media (max-width: 500px) {
     > aside {
       position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 60px;
     }
   }
 }

@@ -32,10 +32,15 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
+  flex-wrap: nowrap;
+  background: white;
   display: flex;
   justify-content: space-between;
+  padding-top: 20px;
   padding-bottom: 8px;
   border-bottom: 1px solid gray;
+  position: relative;
+  z-index: 10;
   > .toggleAside {
     display: none;
     width: 24px;
@@ -66,8 +71,14 @@ export default {
   }
   > .menu {
     > span {
+      display: inline-block;
       margin: 4px 16px;
       font-size: 16px;
+    }
+  }
+  @media (max-width: 800px) {
+    > input {
+      display: none;
     }
   }
   @media (max-width: 500px) {
