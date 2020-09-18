@@ -5,6 +5,7 @@ import Switch from './views/DOC/SwitchDemo.vue'
 import Button from './views/DOC/ButtonDemo.vue'
 import Dialog from './views/DOC/DialogDemo.vue'
 import Tabs from './views/DOC/TabsDemo.vue'
+import Default from './views/DOC/DefaultDemo.vue'
 
 const history = createWebHashHistory()
 export const router = createRouter({
@@ -13,6 +14,7 @@ export const router = createRouter({
         { path: '/', component: Home },
         {
             path: '/doc', component: Doc, children: [
+                { path: '', component: Default },
                 { path: 'switch', component: Switch },
                 { path: 'button', component: Button },
                 { path: 'dialog', component: Dialog },
@@ -20,8 +22,4 @@ export const router = createRouter({
             ]
         }
     ]
-})
-
-router.afterEach(() => {
-
 })
