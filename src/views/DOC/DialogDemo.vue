@@ -12,6 +12,8 @@
         <strong>标题</strong>
       </template>
     </Dialog>
+    <h1>示例2</h1>
+    <Button @click="showDialog">show</Button>
   </div>
 </template>
 
@@ -19,6 +21,8 @@
 import Dialog from "../../lib/Dialog.vue";
 import Button from "../../lib/Button.vue";
 import { ref } from "vue";
+import { openDialog } from "../../lib/openDialog";
+
 export default {
   components: { Dialog, Button },
   setup() {
@@ -32,7 +36,10 @@ export default {
     const f2 = () => {
       console.log(2);
     };
-    return { visible, toggle, f1, f2 };
+    const showDialog = () => {
+      openDialog({ title: "标题", content: "你好" });
+    };
+    return { visible, toggle, f1, f2, showDialog };
   },
 };
 </script>
