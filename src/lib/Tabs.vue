@@ -4,7 +4,7 @@
       <div
         class="gulu-tabs-nav-item"
         v-for="(title,index) in titles"
-        :ref="el=> {if(el) navItems[index]=el}"
+        :ref="el=> {if(title===selected) selectedItem=el}"
         @click="select(title)"
         :key="index"
         :class="{selected:title===selected}"
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import { computed, onMounted, onUpdated, ref, watchEffect } from "vue";
+import { computed, onMounted, ref, watchEffect } from "vue";
 import Tab from "./Tab.vue";
 export default {
   props: {
@@ -32,28 +32,21 @@ export default {
         throw new Error("Tabs 子标签必须是 Tab");
       }
     });
-    const navItems = ref<HTMLDivElement[]>([]);
+    const selectedItem = ref<HTMLDivElement>(null);
     const indicator = ref<HTMLDivElement>(null);
     const container = ref<HTMLDivElement>(null);
     onMounted(() => {
-      const divs = navItems.value;
-      const result = divs.find((div) => div.classList.contains("selected"));
-      const { width, left: left1 } = result.getBoundingClientRect();
-      indicator.value.style.width = width + "px";
-      const { left: left2 } = container.value.getBoundingClientRect();
-      const left = left1 - left2;
-      indicator.value.style.left = left + "px";
+      watchEffect(() => {
+        const {
+          width,
+          left: left1,
+        } = selectedItem.value.getBoundingClientRect();
+        indicator.value.style.width = width + "px";
+        const { left: left2 } = container.value.getBoundingClientRect();
+        const left = left1 - left2;
+        indicator.value.style.left = left + "px";
+      });
     });
-    onUpdated(() => {
-      const divs = navItems.value;
-      const result = divs.find((div) => div.classList.contains("selected"));
-      const { width, left: left1 } = result.getBoundingClientRect();
-      indicator.value.style.width = width + "px";
-      const { left: left2 } = container.value.getBoundingClientRect();
-      const left = left1 - left2;
-      indicator.value.style.left = left + "px";
-    });
-
     const current = computed(() => {
       return defaults.find((tag) => {
         return tag.props.title === props.selected;
@@ -72,7 +65,7 @@ export default {
       container,
       select,
       indicator,
-      navItems,
+      selectedItem,
     };
   },
 };
