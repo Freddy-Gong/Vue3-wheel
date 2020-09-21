@@ -3,7 +3,7 @@
     <h1>示例1</h1>
     <Tabs v-model:selected="currentTitle">
       <Tab title="标题1">内容1</Tab>
-      <Tab title="标题2">内容2</Tab>
+      <Tab title="标题2222">内容2</Tab>
     </Tabs>
   </div>
 </template>
