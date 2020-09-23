@@ -1,6 +1,10 @@
 <template>
   <div class="topnav">
-    <span @click="toggleMenu" class="toggleAside"></span>
+    <span @click="toggleMenu" class="toggleAside">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#i-fenye" />
+      </svg>
+    </span>
     <div class="logo">
       <img src="../assets/logo.jpg" />
     </div>
@@ -17,11 +21,9 @@
 
 <script lang='ts'>
 import { inject, Ref } from "vue";
-import x from "../assets/icons/show.svg";
 
 export default {
   setup() {
-    console.log(x);
     const asidVisibile = inject<Ref<boolean>>("asidVisibile");
     const toggleMenu = () => {
       console.log(1);
@@ -34,9 +36,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$color: #007974;
 .topnav {
+  color: $color;
   flex-wrap: nowrap;
   background: white;
+  background: linear-gradient(
+    145deg,
+    rgb(227, 255, 253, 1) 0%,
+    rgba(183, 233, 230, 1) 100%
+  );
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,13 +57,15 @@ export default {
     display: none;
     width: 24px;
     height: 24px;
-    background: black;
     margin-left: 16px;
+    > svg {
+      width: 24px;
+      height: 24px;
+    }
   }
   > .toggleAside2 {
     width: 24px;
     height: 24px;
-    background: white;
     margin-left: 16px;
     display: none;
   }

@@ -11,10 +11,22 @@
 a{
   text-decoration: none;
   color: black;
+  &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 ol,ul{
   list-style: none;
 }
 body{
   height: 100vh;
+  line-height: 1.5;
+  color: #1d2c40;
+}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
 }
