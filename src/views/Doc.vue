@@ -1,6 +1,6 @@
 <template>
   <div>
-    <TopNav />
+    <TopNav :toggleMenuButtonVisible="true" />
     <div class="content">
       <aside v-if="asidVisibile">
         <h2>Guide</h2>

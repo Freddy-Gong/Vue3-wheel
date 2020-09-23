@@ -1,13 +1,13 @@
 <template>
   <div class="topnav">
-    <span @click="toggleMenu" class="toggleAside">
+    <span @click="toggleMenu" v-if="toggleMenuButtonVisible" class="toggleAside">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#i-fenye" />
       </svg>
     </span>
-    <div class="logo">
+    <router-link to="/" class="logo">
       <img src="../assets/logo.jpg" />
-    </div>
+    </router-link>
     <input type="text" />
     <div class="menu">
       <span>设置1</span>
@@ -23,6 +23,12 @@
 import { inject, Ref } from "vue";
 
 export default {
+  props: {
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false,
+    },
+  },
   setup() {
     const asidVisibile = inject<Ref<boolean>>("asidVisibile");
     const toggleMenu = () => {
