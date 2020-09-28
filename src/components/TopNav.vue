@@ -1,19 +1,25 @@
 <template>
   <div class="topnav">
-    <span @click="toggleMenu" v-if="toggleMenuButtonVisible" class="toggleAside">
+    <span
+      @click="toggleMenu"
+      v-if="toggleMenuButtonVisible"
+      class="toggleAside"
+    >
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#i-fenye" />
       </svg>
     </span>
     <router-link to="/" class="logo">
-      <img src="../assets/logo.jpg" />
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#i-ziyuan" />
+      </svg>
+      <span>Fusion</span>
     </router-link>
-    <input type="text" />
     <div class="menu">
-      <span>设置1</span>
-      <span>设置2</span>
-      <span>设置3</span>
-      <span>设置4</span>
+      <span>Home</span>
+      <span>About</span>
+      <span>Features & Documentation</span>
+      <span>Downloads</span>
     </div>
     <span class="toggleAside2"></span>
   </div>
@@ -46,17 +52,11 @@ $color: #007974;
 .topnav {
   color: $color;
   flex-wrap: nowrap;
-  background: white;
-  background: linear-gradient(
-    145deg,
-    rgb(227, 255, 253, 1) 0%,
-    rgba(183, 233, 230, 1) 100%
-  );
+  background: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 0px;
-  border-bottom: 1px solid gray;
   position: relative;
   z-index: 10;
   > .toggleAside {
@@ -76,10 +76,16 @@ $color: #007974;
     display: none;
   }
   > .logo {
-    margin-left: 16px;
-    > img {
-      width: 4em;
-      height: 4em;
+    color: white;
+    font-size: 32px;
+    margin-left: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > svg {
+      width: 2em;
+      height: 2em;
+      margin-right: 8px;
     }
   }
   > input {
@@ -98,6 +104,8 @@ $color: #007974;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: rgb(171, 125, 208);
+    margin-right: 80px;
     > span {
       display: inline-block;
       margin: 4px 16px;
