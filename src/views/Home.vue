@@ -18,13 +18,14 @@
           <use xlink:href="#i-small_Wheel" />
         </svg>
       </div>
+      <div class="triangle"></div>
     </div>
     <div class="features">
       <svg class="logo">
         <use xlink:href="#i-ziyuan-copy" />
       </svg>
-      <span>Fusion</span>
     </div>
+    <h1 class="font">A cool UI component</h1>
   </div>
 </template>
 
@@ -48,6 +49,12 @@ export default {
     display: flex;
   }
 }
+.triangle {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid white;
+  border-left: 100vw solid transparent;
+}
 .banner {
   padding-left: 8%;
   padding-right: 200px;
@@ -57,15 +64,13 @@ export default {
   > p {
     margin: 60px;
     > a {
+      white-space: nowrap;
       border-radius: 32px;
       padding: 16px 32px;
       margin: 8px 16px;
       background: rgb(153, 75, 185);
       color: white;
       box-shadow: 0 5px 0 fade-out(black, 0.95);
-      &:hover {
-        text-decoration: none;
-      }
     }
     .Github {
       background: transparent;
@@ -76,16 +81,30 @@ export default {
 }
 .small {
   height: 200px;
-
   fill: rgba(77, 45, 156, 1);
   width: 200px;
   animation: small infinite linear 4s;
 }
 .big {
-  fill: rgba(122, 44, 147, 1);
-
+  fill: rgba(179, 44, 147, 1);
   margin-right: -80px;
   animation: small infinite linear 6s reverse;
+}
+
+@media (max-width: 500px) {
+  .small {
+    display: none;
+  }
+  .big {
+    display: none;
+  }
+  .banner {
+    padding: 0;
+    width: 100vw;
+    > p {
+      margin: 24px 0;
+    }
+  }
 }
 @keyframes small {
   0% {
@@ -101,20 +120,14 @@ export default {
   justify-content: center;
   align-items: center;
   color: transparent;
-  > span {
-    background: linear-gradient(
-      180deg,
-      rgba(209, 60, 70, 1) 0%,
-      rgba(125, 68, 147, 1) 100%
-    );
-    -webkit-background-clip: text;
-
-    background-clip: text;
-  }
   > svg {
     width: 64px;
     height: 64px;
     fill: rgba(162, 64, 112, 1);
   }
+}
+.font {
+  font-size: 32px;
+  color: rgb(58, 56, 80);
 }
 </style>
