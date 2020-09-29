@@ -3,17 +3,27 @@
     <div class="gulu-tabs-nav" ref="container">
       <div
         class="gulu-tabs-nav-item"
-        v-for="(title,index) in titles"
-        :ref="el=> {if(title===selected) selectedItem=el}"
+        v-for="(title, index) in titles"
+        :ref="
+          (el) => {
+            if (title === selected) selectedItem = el;
+          }
+        "
         @click="select(title)"
         :key="index"
-        :class="{selected:title===selected}"
-      >{{title}}</div>
+        :class="{ selected: title === selected }"
+      >
+        {{ title }}
+      </div>
       <div ref="indicator" class="gulu-tabs-nav-indicator"></div>
     </div>
 
     <div class="gulu-tabs-content">
-      <component class="gulu-tabs-content-item" :is="current" :key="current.props.title" />
+      <component
+        class="gulu-tabs-content-item"
+        :is="current"
+        :key="current.props.title"
+      />
     </div>
   </div>
 </template>
@@ -72,7 +82,11 @@ export default {
 </script>
 
 <style lang="scss">
-$blue: #40a9ff;
+$blue: linear-gradient(
+  180deg,
+  rgba(209, 60, 70, 1) 0%,
+  rgba(125, 68, 147, 1) 100%
+);
 $color: #333;
 $border-color: #d9d9d9;
 .gulu-tabs {

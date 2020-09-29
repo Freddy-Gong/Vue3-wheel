@@ -1,5 +1,9 @@
 <template>
-  <button class="gulu-switch" @click="toggle" :class="{'gulu-checked':value}">
+  <button
+    class="gulu-switch"
+    @click="toggle"
+    :class="{ 'gulu-checked': value }"
+  >
     <span></span>
   </button>
 </template>
@@ -39,7 +43,11 @@ $h2: $h - 4px;
     }
   }
   &.gulu-checked {
-    background: #1890ff;
+    background: linear-gradient(
+      180deg,
+      rgba(209, 60, 70, 1) 0%,
+      rgba(125, 68, 147, 1) 100%
+    );
     > span {
       left: calc(100% - #{$h2} - 2px);
     }

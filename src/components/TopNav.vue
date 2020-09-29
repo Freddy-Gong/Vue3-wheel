@@ -1,5 +1,5 @@
 <template>
-  <div class="topnav">
+  <div class="topnav" :class="{ line: toggleMenuButtonVisible }">
     <span
       @click="toggleMenu"
       v-if="toggleMenuButtonVisible"
@@ -9,17 +9,21 @@
         <use xlink:href="#i-fenye" />
       </svg>
     </span>
-    <router-link to="/" class="logo">
+    <router-link
+      to="/"
+      class="logo"
+      :class="{ prink: toggleMenuButtonVisible }"
+    >
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#i-ziyuan" />
       </svg>
       <span>Fusion</span>
     </router-link>
     <div class="menu">
-      <span>Home</span>
-      <span>About</span>
-      <span>Features & Documentation</span>
-      <span>Downloads</span>
+      <router-link to="/">Home</router-link>
+      <router-link to="/">About</router-link>
+      <router-link to="/">Features & Documentation</router-link>
+      <router-link to="/">Downloads</router-link>
     </div>
     <span class="toggleAside2"></span>
   </div>
@@ -49,7 +53,25 @@ export default {
 
 <style lang="scss" scoped>
 $color: #007974;
+.prink {
+  > svg {
+    fill: rgba(162, 64, 112, 1);
+  }
+  > span {
+    color: transparent;
+    background: linear-gradient(
+      180deg,
+      rgba(209, 60, 70, 1) 0%,
+      rgba(125, 68, 147, 1) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+}
 .topnav {
+  &.line {
+    border-bottom: 1px solid rgb(171, 125, 208);
+  }
   color: $color;
   flex-wrap: nowrap;
   background: transparent;
@@ -75,6 +97,7 @@ $color: #007974;
     margin-left: 16px;
     display: none;
   }
+
   > .logo {
     color: white;
     font-size: 32px;
@@ -104,9 +127,9 @@ $color: #007974;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(171, 125, 208);
     margin-right: 80px;
-    > span {
+    > a {
+      color: rgb(171, 125, 208);
       display: inline-block;
       margin: 4px 16px;
       font-size: 16px;
