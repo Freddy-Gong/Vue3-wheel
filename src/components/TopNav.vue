@@ -21,8 +21,8 @@
     </router-link>
     <div class="menu">
       <router-link to="/">Home</router-link>
-      <router-link to="/">About</router-link>
-      <router-link to="/">Features & Documentation</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/doc">Features & Documentation</router-link>
       <router-link to="/">Downloads</router-link>
     </div>
     <span class="toggleAside2"></span>

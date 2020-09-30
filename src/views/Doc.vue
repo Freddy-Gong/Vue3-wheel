@@ -3,6 +3,18 @@
     <TopNav :toggleMenuButtonVisible="true" />
     <div class="content">
       <aside v-if="asidVisibile">
+        <h2>Doc</h2>
+        <ol>
+          <li>
+            <router-link to="/doc/about">About</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/install">Install</router-link>
+          </li>
+          <li>
+            <router-link to="/doc/get-started">Get Started</router-link>
+          </li>
+        </ol>
         <h2>Guide</h2>
         <ul>
           <li>
