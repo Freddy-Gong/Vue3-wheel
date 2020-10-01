@@ -12,8 +12,8 @@ export default {
         globals: {
             vue: 'Vue'
         },
-        name: 'Gulu',
-        file: 'dist/lib/gulu.js',
+        name: 'Fusion-UI',
+        file: 'dist/lib/Fusion-UI.js',
         format: 'umd',
         plugins: [terser()]
     }, {
