@@ -4,37 +4,43 @@
     <div class="content">
       <aside v-if="asidVisibile">
         <h2>Doc</h2>
-        <ol>
+        <ul>
           <li>
-            <router-link to="/doc/about">About</router-link>
+            <router-link to="/doc/about" active-class="selected"
+              >About</router-link
+            >
           </li>
           <li>
-            <router-link to="/doc/install">Install</router-link>
+            <router-link to="/doc/install" active-class="selected"
+              >Install</router-link
+            >
           </li>
           <li>
-            <router-link to="/doc/get-started">Get Started</router-link>
+            <router-link to="/doc/get-started" active-class="selected"
+              >Get Started</router-link
+            >
           </li>
-        </ol>
+        </ul>
         <h2>Guide</h2>
         <ul>
           <li>
             <router-link to="/doc/switch" active-class="selected"
-              >Switch组件</router-link
+              >Switch</router-link
             >
           </li>
           <li>
             <router-link to="/doc/button" active-class="selected"
-              >Button组件</router-link
+              >Button</router-link
             >
           </li>
           <li>
             <router-link to="/doc/dialog" active-class="selected"
-              >Dialog组件</router-link
+              >Dialog</router-link
             >
           </li>
           <li>
             <router-link to="/doc/tabs" active-class="selected"
-              >Tabs组件</router-link
+              >Tabs</router-link
             >
           </li>
         </ul>
@@ -68,12 +74,14 @@ export default {
     padding-top: 20px;
     > ul {
       > li {
-        margin: 24px;
+        padding: 12px 24px;
         > a {
+          white-space: nowrap;
           color: black;
         }
         > .selected {
           color: rgb(171, 125, 208);
+          background: rgba(171, 125, 208, 0.5);
         }
       }
     }
@@ -90,7 +98,4 @@ export default {
     }
   }
 }
-</style>
-
-<style  scoped>
 </style>
