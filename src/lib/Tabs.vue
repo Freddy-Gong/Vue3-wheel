@@ -46,16 +46,19 @@ export default {
     const indicator = ref<HTMLDivElement>(null);
     const container = ref<HTMLDivElement>(null);
     onMounted(() => {
-      watchEffect(() => {
-        const {
-          width,
-          left: left1,
-        } = selectedItem.value.getBoundingClientRect();
-        indicator.value.style.width = width + "px";
-        const { left: left2 } = container.value.getBoundingClientRect();
-        const left = left1 - left2;
-        indicator.value.style.left = left + "px";
-      });
+      watchEffect(
+        () => {
+          const {
+            width,
+            left: left1,
+          } = selectedItem.value.getBoundingClientRect();
+          indicator.value.style.width = width + "px";
+          const { left: left2 } = container.value.getBoundingClientRect();
+          const left = left1 - left2;
+          indicator.value.style.left = left + "px";
+        },
+        { flush: "post" }
+      );
     });
     const current = computed(() => {
       return defaults.find((tag) => {
@@ -82,11 +85,7 @@ export default {
 </script>
 
 <style lang="scss">
-$blue: linear-gradient(
-  180deg,
-  rgba(209, 60, 70, 1) 0%,
-  rgba(125, 68, 147, 1) 100%
-);
+$blue: rgba(125, 68, 147, 1);
 $color: #333;
 $border-color: #d9d9d9;
 .gulu-tabs {
