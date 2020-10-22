@@ -96,7 +96,7 @@ $color: #007974;
   align-items: center;
   padding: 8px 0px;
   position: relative;
-  z-index: 10;
+  z-index: 20;
   &.line {
     border-bottom: 1px solid rgb(171, 125, 208);
     background: white;

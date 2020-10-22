@@ -23,4 +23,10 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
 }
+p {
+  text-align: left;
+}
+pre {
+  text-align: left;
+}
 </style>

@@ -13,7 +13,6 @@ import install from './markdown/Install.md'
 import getStarted from './markdown/GetStarted.md'
 
 
-
 const history = createWebHashHistory()
 const md = string => h(Markdown, { content: string, key: string })
 export const router = createRouter({
