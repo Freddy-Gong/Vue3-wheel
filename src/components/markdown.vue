@@ -16,4 +16,9 @@ export default defineComponent({
 </script>
 
 <style lang='scss' scoped>
+article {
+  > h1 {
+    border: 1px solid red;
+  }
+}
 </style>

@@ -61,7 +61,11 @@ export default {
   color: white;
   margin-top: 60px;
   padding-bottom: 100px;
+  > h1 {
+    display: inline;
+  }
   > p {
+    text-align: center;
     margin: 60px;
     > a {
       white-space: nowrap;
@@ -78,6 +82,9 @@ export default {
       color: rgb(171, 125, 208);
     }
   }
+}
+.font {
+  display: inline;
 }
 .small {
   height: 200px;

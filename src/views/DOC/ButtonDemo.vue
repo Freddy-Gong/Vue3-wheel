@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="button">
     <h1>Button 示例</h1>
     <Demo :component="Button1Demo" />
     <Demo :component="Button2Demo" />
@@ -31,3 +31,12 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.button {
+  > h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
