@@ -97,9 +97,9 @@ export default {
     position: fixed;
     top: 0;
     margin-top: 80px;
-    left: 136px;
+    left: 142px;
     width: 90%;
-    height: 100vh;
+    height: 89vh;
     overflow: auto;
   }
   @media (max-width: 500px) {
@@ -110,6 +110,7 @@ export default {
       padding-top: 80px;
     }
     > main {
+      margin-top: 0;
       position: static;
       top: 0;
       left: 0;

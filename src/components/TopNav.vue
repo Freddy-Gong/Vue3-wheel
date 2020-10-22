@@ -19,6 +19,15 @@
       </svg>
       <span>Fusion</span>
     </router-link>
+    <span
+      @click="toggleMenu"
+      v-if="toggleMenuButtonVisible"
+      class="toggleAside3"
+    >
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#i-fenye" />
+      </svg>
+    </span>
     <div class="menu">
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
@@ -68,6 +77,13 @@ $color: #007974;
     -webkit-background-clip: text;
   }
 }
+.toggleAside3 {
+  > svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+  }
+}
 .topnav {
   position: fixed;
   top: 0;
@@ -93,6 +109,7 @@ $color: #007974;
     > svg {
       width: 24px;
       height: 24px;
+      fill: rgb(171, 125, 208);
     }
   }
   > .toggleAside2 {

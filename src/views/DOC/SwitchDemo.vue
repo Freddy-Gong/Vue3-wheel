@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="switch">
     <h1>Switch 组件示例</h1>
     <Demo :component="Switch1Demo" />
     <Demo :component="Switch2Demo" />
@@ -27,3 +27,10 @@ export default {
   },
 };
 </script>
+<style  lang='scss' >
+.switch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+</style>

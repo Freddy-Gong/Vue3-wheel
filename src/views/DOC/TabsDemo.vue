@@ -17,3 +17,10 @@ export default {
   },
 };
 </script>
+<style lang="scss" scope>
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+</style>

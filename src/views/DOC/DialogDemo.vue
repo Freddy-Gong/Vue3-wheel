@@ -1,7 +1,9 @@
 <template>
-  <h1>Dialog 示例</h1>
-  <Demo :component="Dialog1Demo" />
-  <Demo :component="Dialog2Demo" />
+  <div class="dialog">
+    <h1>Dialog 示例</h1>
+    <Demo :component="Dialog1Demo" />
+    <Demo :component="Dialog2Demo" />
+  </div>
 </template>
 
 <script lang="ts">
@@ -20,3 +22,12 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.dialog {
+  > h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+</style>
