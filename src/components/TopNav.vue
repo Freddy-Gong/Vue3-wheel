@@ -69,9 +69,9 @@ $color: #007974;
   }
 }
 .topnav {
-  &.line {
-    border-bottom: 1px solid rgb(171, 125, 208);
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
   color: $color;
   flex-wrap: nowrap;
   background: transparent;
@@ -81,6 +81,10 @@ $color: #007974;
   padding: 8px 0px;
   position: relative;
   z-index: 10;
+  &.line {
+    border-bottom: 1px solid rgb(171, 125, 208);
+    background: white;
+  }
   > .toggleAside {
     display: none;
     width: 24px;

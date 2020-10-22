@@ -67,27 +67,40 @@ export default {
 <style lang="scss" scoped>
 .content {
   display: flex;
-  height: 630px;
+  flex-grow: 1;
   > aside {
     background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
     border-right: 1px solid rgb(171, 125, 208);
-    padding-top: 20px;
+    padding-top: 100px;
+    z-index: 0;
     > ul {
       > li {
-        padding: 12px 24px;
+        padding: 6px 0;
         > a {
+          padding: 6px 24px;
+          display: block;
           white-space: nowrap;
           color: black;
         }
         > .selected {
-          color: rgb(171, 125, 208);
+          color: white;
           background: rgba(171, 125, 208, 0.5);
         }
       }
     }
   }
   > main {
-    padding: 4px 16px;
+    position: fixed;
+    top: 0;
+    margin-top: 80px;
+    left: 136px;
+    width: 90%;
+    height: 100vh;
+    overflow: auto;
   }
   @media (max-width: 500px) {
     > aside {
@@ -95,6 +108,12 @@ export default {
       top: 0;
       left: 0;
       padding-top: 80px;
+    }
+    > main {
+      position: static;
+      top: 0;
+      left: 0;
+      width: 100%;
     }
   }
 }
