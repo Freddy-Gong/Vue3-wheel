@@ -9,7 +9,7 @@ import {Button, Tabs, Switch, Dialog} from "king-ui"
 
 就可以使用我提供的组件了。
 
-## Vue 单文件组件
+# Vue 单文件组件
 
 代码示例：
 

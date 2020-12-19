@@ -7,7 +7,9 @@
           <h1>Fusion UI</h1>
           <h2>A cool UI component</h2>
           <p class="action">
-            <a class="Github">Github</a>
+            <a class="Github" href="https://github.com/Freddy-Gong/Vue3-wheel"
+              >Github</a
+            >
             <router-link to="/doc">Get Started</router-link>
           </p>
         </div>
