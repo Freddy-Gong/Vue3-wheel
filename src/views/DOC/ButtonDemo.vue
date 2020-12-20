@@ -1,6 +1,11 @@
 <template>
   <div class="button">
-    <h1>Button 示例</h1>
+    <h1>Button Exapmle</h1>
+    <h2>Design Principal</h2>
+    <ul>
+      <li>Guide users to achieve the desired actions.</li>
+      <li>Prevent user to make mistakes.</li>
+    </ul>
     <Demo :component="Button1Demo" />
     <Demo :component="Button2Demo" />
     <Demo :component="Button3Demo" />
@@ -37,6 +42,14 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+  > h2 {
+    display: flex;
+  }
+  > ul {
+    > li {
+      display: flex;
+    }
   }
 }
 </style>

@@ -1,22 +1,30 @@
 <demo>
-支持 level
+Level API
 </demo>
 <template>
-  <div>
+  <div class="level-button">
+    <p>
+      We can change the leve of button, link and text to remind the user of the
+      importance of the action.
+    </p>
+    <h3>Button</h3>
+
     <div>
-      <Button level="main">主要按钮</Button>
-      <Button>普通按钮</Button>
-      <Button level="danger">危险按钮</Button>
+      <Button level="main">Main</Button>
+      <Button>Normal</Button>
+      <Button level="danger">Danger</Button>
     </div>
+    <h3>Link</h3>
     <div>
-      <Button theme="link" level="main">主要链接按钮</Button>
-      <Button theme="link">普通链接按钮</Button>
-      <Button theme="link" level="danger">危险链接按钮</Button>
+      <Button theme="link" level="main">Main</Button>
+      <Button theme="link">Normal</Button>
+      <Button theme="link" level="danger">Danger</Button>
     </div>
+    <h3>Text</h3>
     <div>
-      <Button theme="text" level="main">主要文字按钮</Button>
-      <Button theme="text">普通文字按钮</Button>
-      <Button theme="text" level="danger">危险文字按钮</Button>
+      <Button theme="text" level="main">Main</Button>
+      <Button theme="text">Normal</Button>
+      <Button theme="text" level="danger">Danger</Button>
     </div>
   </div>
 </template>
@@ -29,3 +37,14 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.level-button {
+  > div {
+    display: flex;
+    margin: 8px 0;
+  }
+  > h3 {
+    display: flex;
+  }
+}
+</style>

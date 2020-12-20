@@ -1,4 +1,4 @@
-<demo>disable 功能</demo>
+<demo>Disable Exapmle</demo>
 
 <template>
   <Switch v-model:value="bool" disabled />

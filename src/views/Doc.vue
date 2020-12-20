@@ -88,6 +88,11 @@ export default {
     }
   }
 }
+@media (max-width: 500px) {
+  .features {
+    display: none;
+  }
+}
 .title {
   font-weight: bolder;
 }
@@ -139,10 +144,12 @@ export default {
   }
   @media (max-width: 500px) {
     > aside {
+      width: 30%;
       position: absolute;
       top: 0;
       left: 0;
       padding-top: 80px;
+      z-index: 10;
     }
     > main {
       margin-top: 0;

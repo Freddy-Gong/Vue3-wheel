@@ -1,10 +1,10 @@
 <demo>
-支持显示加载中
+Loading API
 </demo>
 <template>
-  <div>
-    <Button loading>加载中</Button>
-    <Button>加载完毕</Button>
+  <div class="loading_button">
+    <Button loading>loading</Button>
+    <Button>loaded</Button>
   </div>
 </template>
 
@@ -16,3 +16,9 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.loading_button {
+  display: flex;
+  justify-content: center;
+}
+</style>

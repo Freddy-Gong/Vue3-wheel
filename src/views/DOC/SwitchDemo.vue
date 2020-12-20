@@ -1,6 +1,11 @@
 <template>
   <div class="switch">
-    <h1>Switch 组件示例</h1>
+    <h1>Switch Exapmle</h1>
+    <p>Switching Selector.</p>
+    <h2>When to use</h2>
+    <p>
+      If you need to represent the switching between two states or on-off state.
+    </p>
     <Demo :component="Switch1Demo" />
     <Demo :component="Switch2Demo" />
   </div>
