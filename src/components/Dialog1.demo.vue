@@ -4,6 +4,7 @@ Basic Example
 <template>
   <div>
     <Button @click="toggle">open dialog</Button>
+
     <Dialog
       v-model:visible="x"
       :closeOnClickOverlay="false"

@@ -137,7 +137,7 @@ export default {
     padding-top: 25px;
     padding-right: 16%;
     left: 25%;
-    width: 74%;
+    width: 75%;
     height: 89vh;
     overflow: auto;
   }

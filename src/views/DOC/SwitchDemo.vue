@@ -37,5 +37,11 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  > h1 {
+    margin-bottom: 16px;
+  }
+  > p {
+    margin-bottom: 16px;
+  }
 }
 </style>

@@ -7,6 +7,7 @@
       <li>Prevent user to make mistakes.</li>
     </ul>
     <Demo :component="Button1Demo" />
+    <h2>Other API</h2>
     <Demo :component="Button2Demo" />
     <Demo :component="Button3Demo" />
     <Demo :component="Button4Demo" />
@@ -42,6 +43,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 16px;
   }
   > h2 {
     display: flex;
@@ -49,6 +51,7 @@ export default {
   > ul {
     > li {
       display: flex;
+      margin: 16px 0;
     }
   }
 }

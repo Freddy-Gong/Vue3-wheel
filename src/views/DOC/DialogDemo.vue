@@ -1,7 +1,14 @@
 <template>
   <div class="dialog">
-    <h1>Dialog 示例</h1>
+    <h1>Dialog Example</h1>
+    <p>
+      First, we can use Dialog in our code as component, detial in under code.
+    </p>
     <Demo :component="Dialog1Demo" />
+    <p>
+      Second, we can use function showDialog to use Dialog in our code, detail
+      in under code.
+    </p>
     <Demo :component="Dialog2Demo" />
   </div>
 </template>
@@ -28,6 +35,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 16px;
   }
 }
 </style>

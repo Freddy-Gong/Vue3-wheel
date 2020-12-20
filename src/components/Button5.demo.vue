@@ -2,9 +2,15 @@
 Loading API
 </demo>
 <template>
-  <div class="loading_button">
-    <Button loading>loading</Button>
-    <Button>loaded</Button>
+  <div>
+    <p class="loading-content">
+      When click button to get some data or response, we should alter the user
+      that this action is ongoing and will take some time.
+    </p>
+    <div class="loading_button">
+      <Button loading>loading</Button>
+      <Button>loaded</Button>
+    </div>
   </div>
 </template>
 
@@ -19,6 +25,8 @@ export default {
 <style lang="scss">
 .loading_button {
   display: flex;
-  justify-content: center;
+}
+.loading-content {
+  margin: 16px 0;
 }
 </style>

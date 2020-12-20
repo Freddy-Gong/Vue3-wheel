@@ -46,5 +46,8 @@ export default {
   > h3 {
     display: flex;
   }
+  > p {
+    margin: 16px 0;
+  }
 }
 </style>

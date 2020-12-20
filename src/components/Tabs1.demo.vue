@@ -1,5 +1,5 @@
 <demo>
-常规使用
+Basic Example
 </demo>
 <template>
   <Tabs v-model:selected="x">

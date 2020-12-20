@@ -1,5 +1,7 @@
 <template>
-  <h1 class="tab">Tabs 示例</h1>
+  <h1 class="tab">Tabs Example</h1>
+  <p>Tabs make it easy to switch between different views.</p>
+
   <Demo :component="Tabs1Demo" />
 </template>
 
@@ -22,6 +24,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-bottom: 16px;
 }
 p {
   text-align: left;

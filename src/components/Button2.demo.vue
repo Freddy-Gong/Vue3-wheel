@@ -49,5 +49,8 @@ export default {
     margin: 8px 0;
     align-items: center;
   }
+  > p {
+    margin: 16px 0;
+  }
 }
 </style>
