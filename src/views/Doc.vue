@@ -76,19 +76,18 @@ export default {
 <style lang="scss" scoped>
 .features {
   position: absolute;
-  right: 5%;
+  right: 3%;
   top: 100px;
-  width: 8%;
+  width: 108px;
   > ul {
     > li {
       padding: 4px 0;
       display: flex;
       align-items: center;
-      flex-wrap: nowrap;
     }
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .features {
     display: none;
   }
@@ -138,7 +137,7 @@ export default {
     padding-top: 25px;
     padding-right: 16%;
     left: 25%;
-    width: 75%;
+    width: 74%;
     height: 89vh;
     overflow: auto;
   }

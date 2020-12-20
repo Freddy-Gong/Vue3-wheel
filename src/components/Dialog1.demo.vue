@@ -1,9 +1,9 @@
 <demo>
-常规使用
+Basic Example
 </demo>
 <template>
   <div>
-    <Button @click="toggle">打开对话框</Button>
+    <Button @click="toggle">open dialog</Button>
     <Dialog
       v-model:visible="x"
       :closeOnClickOverlay="false"
@@ -11,11 +11,11 @@
       :cancel="f2"
     >
       <template v-slot:content>
-        <strong>hi</strong>
-        <div>hi2</div>
+        <strong>content1</strong>
+        <div>content2</div>
       </template>
       <template v-slot:title>
-        <strong>加粗的标题</strong>
+        <strong>Title</strong>
       </template>
     </Dialog>
   </div>
@@ -37,7 +37,7 @@ export default {
       x.value = !x.value;
     };
     const f1 = () => {
-      return false;
+      return true;
     };
     const f2 = () => {};
     return {

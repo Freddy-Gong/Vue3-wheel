@@ -1,17 +1,17 @@
-# 开始使用
-请先[Install](#/doc/install)本组件库。
+# Get started
+Please [Install](#/doc/install) this UI components。
 
-然后在你的代码中写入下面的代码
+Then write the following code in your code
 
 ```
 import {Button, Tabs, Switch, Dialog} from "king-ui"
 ```
 
-就可以使用我提供的组件了。
+This allows you to use the components i have provided.
 
-# Vue 单文件组件
+# Vue components
 
-代码示例：
+code example：
 
 ```
 <template>

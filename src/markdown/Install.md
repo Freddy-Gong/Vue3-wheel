@@ -1,15 +1,15 @@
-# 安装
+# Install
 
-打开终端运行下列命令：
+run this command in you terminal
 
 ```
 npm install king-ui
 ```
 
-或
+or
 
 ```
 yarn add king-ui
 ```
 
-下一节：[Get Started](#/doc/get-started)
+next：[Get Started](#/doc/get-started)

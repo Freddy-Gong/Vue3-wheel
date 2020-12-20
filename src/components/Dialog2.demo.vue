@@ -1,9 +1,9 @@
 <demo>
-一键打开 Dialog
+The other method to set Dialog in code
 </demo>
 <template>
   <div>
-    <Button @click="showDialog">打开对话框</Button>
+    <Button @click="showDialog">open dialog</Button>
   </div>
 </template>
 
@@ -18,8 +18,8 @@ export default {
   setup() {
     const showDialog = () => {
       openDialog({
-        title: h("strong", {}, "标题"),
-        content: "你好",
+        title: h("strong", {}, "Title"),
+        content: "Hello!",
         ok() {
           console.log("ok");
         },
