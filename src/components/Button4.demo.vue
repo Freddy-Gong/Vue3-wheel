@@ -7,9 +7,9 @@ Disabled API
       We can disable some buttons to prevent unauthorized users from clicking.
     </p>
     <div class="disable-button">
-      <Button disabled>disable button</Button>
-      <Button theme="link" disabled>disable link</Button>
-      <Button theme="text" disabled>disable text</Button>
+      <Button disabled>button</Button>
+      <Button theme="link" disabled>link</Button>
+      <Button theme="text" disabled>text</Button>
     </div>
   </div>
 </template>
